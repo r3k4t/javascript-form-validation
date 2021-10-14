@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript Form Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <script>
+    function check(myform) {
+      if (myform.myname.value == "" || myform.myname.value == null) {
+        alert("Name is mandatory");
+        return false;
+      }
+
+
+      if (myform.myaddress.value == "" || myform.myaddress.value == null) {
+        alert("Address is mandatory");
+        return false;
+      }
+
+
+      if (myform.myemail.value == "" || myform.myemail.value == null) {
+        alert("Email Address is mandatory");
+        return false;
+      }
+
+      if (myform.myphone.value == "" || myform.myphone.value == null) {
+        alert("Phone number is mandatory");
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+  </script>
+
+
+  <style>
+    body {
+      color: black;
+      background-color: rgb(116, 116, 235);
+    }
+
+    h3 {
+      color: whitesmoke;
+    }
+  </style>
+
+
+
+  <form style="padding-top:50px " name="formvalidate" action="" method="get" onSubmit="return check(formvalidate)">
+
+
+
+    <h3 style="text-align:center">JavaScript Form Validation </h3>
+    <br>
+
+
+    <div class="container">
+
+
+
+      <div class="card card-body">
+
+
+
+
+
+
+
+        <div class="form-row">
+
+
+          <div class=" form-group col-mb-6">
+            <label for="" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="myname">
+          </div>
+
+          <div class=" form-group col-mb-6">
+            <label for="" class="form-label">Address:</label>
+            <input type="address" class="form-control" name="myaddress">
+          </div>
+
+
+          <div class=" form-group col-mb-6">
+            <label for="" class="form-label">Email Address:</label>
+            <input type="email" class="form-control" name="myemail">
+          </div>
+
+
+          <div class=" form-group col-mb-6">
+            <label for="" class="form-label">Phone No:</label>
+            <input type="number" class="form-control" name="myphone">
+          </div>
+
+
+
+
+
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-primary">Sign Up </button>
+      </div>
+    </div>
+  </form>
+
+
+</body>
+
+</html>
